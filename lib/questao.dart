@@ -19,3 +19,5 @@ class Questao extends StatelessWidget {
     );
   }
 }
+
+// Recebe o texto da pergunta.

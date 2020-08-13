@@ -8,6 +8,7 @@ class PerguntaAppState extends State<PerguntaApp> {
 
   var _perguntaSelecionada = 0;
   var _pontuacaoTotal = 0;
+
   final _perguntas = const [
      {
        'texto':'Qual é a sua cor favorita?',
@@ -41,7 +42,6 @@ class PerguntaAppState extends State<PerguntaApp> {
       _pontuacaoTotal += pontuacao;
     });
     }
-    print(_pontuacaoTotal);
   }
 
   void _reiniciarQuestionario() {
@@ -62,7 +62,9 @@ class PerguntaAppState extends State<PerguntaApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Perguntas'),
-        ), body: temPerguntaSelecionada 
+          centerTitle: true,
+        )
+        , body: temPerguntaSelecionada 
         ? Questionario(
           perguntas: _perguntas,
           perguntaSelecionada: _perguntaSelecionada,

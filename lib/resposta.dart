@@ -8,23 +8,21 @@ class Resposta extends StatelessWidget {
 
   Resposta(this.texto, this.quandoSelecionado);
 
-  final perguntas = [
-      'Resposta 1?',
-      'Resposta 2?',
-      'Resposta 3?',
-    ];
-
   @override
   Widget build(BuildContext context) {
 
     return Container(
-      width: double.infinity,
+      width: 300,
       child: RaisedButton(
         textColor: Colors.white,
         color: Colors.blue,
         child: Text(texto),
+        highlightColor: Colors.orange,
+        elevation: 5,
         onPressed: quandoSelecionado,
       ),
     );
   }
 }
+
+// Recebe a resposta das perguntas.
